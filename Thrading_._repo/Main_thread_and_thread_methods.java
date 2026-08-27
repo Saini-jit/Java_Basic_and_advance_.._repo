@@ -6,6 +6,7 @@ The default name of the main thread is "main".
 The default priority of the main thread is 5.
 It usually finishes last as it may perform cleanup and shutdown tasks.*/
 // to control the main thread we have to create reference which is created by Thread.currentThread()
+// tha child threads inherits the priority of the main threads
 
 int num;
 Main_thread_and_thread_methods(int num){
@@ -30,7 +31,11 @@ public void run(){
         tc.setName("Newthread");
         System.out.println(tc.getName());
         System.out.println(tc.getPriority());
-        tc.setPriority(5);
+        tc.setPriority(Thread.MAX_PRIORITY);
+        System.out.println(tc.getPriority());
+        tc.setPriority(Thread.NORM_PRIORITY);
+        System.out.println(tc.getPriority());
+        tc.setPriority(Thread.MIN_PRIORITY);
         System.out.println(tc.getPriority());
         
     }
