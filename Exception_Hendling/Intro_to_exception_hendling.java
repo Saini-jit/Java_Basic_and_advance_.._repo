@@ -41,5 +41,21 @@ public class Intro_to_exception_hendling{
         finally{
             System.out.println("code is exicuted");
         }
+
+    // use of throw 
+    try {
+        if(a<18){
+            //throw new Exception("age is less then 18"); // ye sirf is line se compile nahi hoga kyonki Exception class ek checked-exception class hai 
+            //do tarikae
+            // 1) throws ka use karen 
+            // 2) try catch ka use karen
+            // yahan hamne try catch ka use kiya hai
+            throw new Exception("under age")    ;
+        }
+        
+    } catch (Exception e) {
+        System.out.println("Error : "+e.getMessage());
+    }
+        
     }
 }
