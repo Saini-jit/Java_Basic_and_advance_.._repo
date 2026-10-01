@@ -12,13 +12,13 @@ Supports handling of both checked and unchecked exceptions. */
                       |                         |   
                    Unchecked        ____________|____________
                                     |                       |
-                                Run-Time               Compile-Time
-                                    |                       |
-                                Unchecked                Checked
+                                Run-Time(Unchecked)     Compile-Time(checked)
+                                                           
+                        
 
                             Types of Exceptions :
                                     |
-                        ____________|____________    
+                        ____________|____________    f
                         |                        |
                     User-Defined           Built-in-Exception
                     Exception                     |
