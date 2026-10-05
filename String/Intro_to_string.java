@@ -31,4 +31,47 @@ There are two ways to create a string in Java:
     
     StringBuffer: A mutable and thread-safe class used for string manipulation, particularly when synchronization is required.
     
-    StringBuilder: A mutable and non-thread-safe class commonly used for efficient string manipulation when synchronization is not required.*/
+    StringBuilder: A mutable and non-thread-safe class commonly used for efficient string manipulation when synchronization is not required.
+    
+    == operator and equals() method
+    == operator is use for only comparing premetive tatatyps and object refrences menas addresses mens if fe compair the two strings using == and 
+    ther objects then if the are made by the string littrels mens stored in the string constent pool and the content is same ten the address weill be 
+    the same for both object refrences of the strings and it will return true but if the content is same and the object refrences or addresses are 
+    different then it will return false for instence one string object refres to the string pooled object and another is stored in the normal heap 
+    memory or both are stred in the heap memory because of creatied by using new keyword or any method like concat() etc then there addresses will be 
+    different and the it will return false.
+    equals() method is sued to compare the content stored on the objects refrences means if the addresses are different of the differenct string 
+    objects but with same contennt then it will return true this method is defined in the Object class.
+    
+    .intern() method : .intern() method is used to stor the string string in the string pool or to reffer to the same object if abelabel in the 
+    string constent pool. the string objects with are made using the new keyword or by andy method like cocat() because of String class is immutable 
+    and no alteration can be done in the predefined string objects and thes methods not changes the string content but creats an another object in 
+    the normal heap memory then these objects are refered or created in the string constent pool using the intern() method.
+    
+    String class is immutable means it can't be altered if once and object of a String is created it it is thread safe also because of immutability 
+    once and string is created then no other method or can't alter it so if any number of threads can access it at once because it is only can be 
+    accessed not alloud to be altered.
+    
+    Implements Interfaces :The String class implements several interfaces that provide features such as character-sequence handling, comparison, 
+    serialization, and constant description.
+      CharSequence: Provides methods for accessing a sequence of characters, such as charAt() and length().
+      Comparable<String>: Enables lexicographical comparison of strings using compareTo().
+      Serializable: Allows String objects to be serialized.
+      Modern Java versions also support additional interfaces related to constant descriptions.
+
+    String Constructors in Java
+      In Java, String constructors are used to create new String objects from different sources like character arrays, byte arrays, or another string.
+      Although strings in Java are usually created using string literals, the String class also provides constructors for more control.
+      for instence :
+      // Constructor 1: Creating string using new keyword
+        String str1 = new String("Hello Java");
+      // Constructor 2: Creating string from character array
+        char[] charArray = { 'J', 'A', 'V', 'A' };
+        String str2 = new String(charArray);
+      // Constructor 3: Creating string from byte array
+        byte[] byteArray = { 72, 101, 108, 108, 111 };
+        String str3 = new String(byteArray);
+        
+        for more go to the geeksforgeeks.
+
+    */
