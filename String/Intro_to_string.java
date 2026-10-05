@@ -74,4 +74,36 @@ There are two ways to create a string in Java:
         
         for more go to the geeksforgeeks.
 
+StringBuffer class in Java represents a sequence of characters that can be modified, which means we can change the content of the StringBuffer 
+    without creating a new object every time. It represents a mutable sequence of characters.
+       Unlike String, we can modify the content of the StringBuffer without creating a new object.
+       All methods of StringBuffer are synchronized, making it safe to use in multithreaded environments.
+       Ideal for scenarios with frequent modifications like append, insert, delete or replace operations.
+    Interface Hierarchy Implemented by StringBuffer
+       The diagram shows the interfaces implemented by StringBuffer and illustrates its relationship with Appendable, CharSequence, and Serializable 
+       in Java.
+    Constructors of StringBuffer Class
+StringBuffer(): It reserves room for 16 characters without reallocation
+StringBuffer(int size): It accepts an integer argument that explicitly sets the size of the buffer.
+StringBuffer(String str): It accepts a string argument that sets the initial contents of the StringBuffer object and reserves room for 16 more 
+characters without reallocation.
+
+StringBuilder is a mutable sequence of characters provided by the java.lang package. Unlike String, its contents can be modified without 
+creating a new object for every operation. It is commonly used when a string needs to be changed frequently, especially in single-threaded 
+applications
+    It provides similar functionality to StringBuffer, but without thread safety.
+    StringBuilder is not synchronized, so it performs better in single-threaded applications.
+    Use StringBuffer only when thread safety is required; otherwise, prefer StringBuilder for improved performance.
+
+Hierarchy of StringBuilder
+StringBuilder extends AbstractStringBuilder and implements Serializable, CharSequence, and Comparable<StringBuilder>.
+
+StringBuilder Constructors
+StringBuilder class provides multiple constructors for different use cases.
+
+StringBuilder() : Creates an empty builder with a default capacity of 16 characters.
+StringBuilder(int capacity) : Creates an empty builder with a specified initial capacity.
+StringBuilder(String str) : Initializes the builder with the content of the given String.
+StringBuilder(CharSequence cs) : Initializes the builder with the given CharSequence (for example, String or StringBuffer).
+    
     */
